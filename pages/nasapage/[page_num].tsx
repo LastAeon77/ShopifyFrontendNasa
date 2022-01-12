@@ -1,68 +1,29 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Box from "@mui/material/Box";
-import { height } from "@mui/system";
 import { useRouter } from "next/router";
-
-type nasa_camera = {
-  id: number;
-  name: string;
-  rover_id: number;
-  full_name: string;
-};
-
-type nasa_rover = {
-  id: number;
-  name: string;
-  landing_date: string;
-  launch_date: string;
-  status: string;
-};
-type nasa_photo = {
-  id: number;
-  sol: number;
-  camera: nasa_camera;
-  img_src: string;
-  earth_date: string;
-  rover: nasa_rover;
-};
-
-type nasa_data = {
-  photos: Array<nasa_photo>;
-};
-
-const Image_Box = (ndata: nasa_photo, num: string) => {
-  return (
-    <div id={num}>
-      <Box
-        sx={{
-          width: 300,
-          height: 300,
-          backgroundColor: "primary.dark",
-          "&:hover": {
-            backgroundColor: "primary.main",
-            opacity: [0.9, 0.8, 0.7],
-          },
-        }}
-      >
-        <div>
-          <img src={ndata.img_src} style={{ width: 300, height: 200 }}></img>
-          ID: {ndata.id}
-          Sol: {ndata.sol}
-          Camera: {ndata.camera.full_name}
-          earth_date: {ndata.earth_date}
-          rover: {ndata.rover.name}
-          rover_active: {ndata.rover.status}
-        </div>
-      </Box>
-    </div>
-  );
-};
+import ImageBox from "../../components/ImageBox";
+import {
+  nasa_photo,
+  nasa_camera,
+  nasa_rover,
+  nasa_data,
+} from "../../components/types";
 
 function Nasapage() {
   const [data, setdata] = useState<Array<nasa_photo>>();
+  const [likedset, setlikedset] = useState<Set<number>>(new Set<number>());
   const router = useRouter();
+  const onclicklike = (id: number) => {
+    likedset.add(id);
+    setlikedset(likedset);
+    localStorage.setItem("data_set", JSON.stringify(Array.from(likedset)));
+  };
+  const onclickdislike = (id: number) => {
+    likedset.delete(id);
+    setlikedset(likedset);
+    localStorage.setItem("data_set", JSON.stringify(Array.from(likedset)));
+  };
   useEffect(() => {
     axios
       .get(
@@ -70,10 +31,23 @@ function Nasapage() {
       )
       .then((res) => setdata(res.data.photos as Array<nasa_photo>))
       .catch((errors) => console.log(errors));
+    const new_set = localStorage.getItem("data_set");
+    if (new_set !== null) {
+      setlikedset(new Set(JSON.parse(new_set)));
+    }
   }, [router.isReady]);
+
   return (
-    <div className="flex justify-center align-center">
-      {data?.map((object, i) => Image_Box(object, i.toString()))}
+    <div className="flex flex-wrap content-center justify-center items-center">
+      {data?.map((object, i) => (
+        <ImageBox
+          ndata={object}
+          num={i}
+          localstoragedata={likedset}
+          likefunction={onclicklike}
+          dislikefunction={onclickdislike}
+        />
+      ))}
     </div>
   );
 }
