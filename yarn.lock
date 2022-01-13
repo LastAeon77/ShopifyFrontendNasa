@@ -1794,10 +1794,10 @@
   "resolved" "https://registry.npmjs.org/@netlify/esbuild/-/esbuild-0.13.6.tgz"
   "version" "0.13.6"
 
-"@netlify/framework-info@^8.0.0":
-  "integrity" "sha512-8kU0+1civXPehsOcHY9DzAAFWmovkPQFt4W+Z2J86MojER5BXk6PTXhEHNcmgPSYoTejcA7vQ0nAPFErzt5gkA=="
-  "resolved" "https://registry.npmjs.org/@netlify/framework-info/-/framework-info-8.0.0.tgz"
-  "version" "8.0.0"
+"@netlify/framework-info@^8.0.1":
+  "integrity" "sha512-fEvnNMPTFrjHui43UVsljopAmkB4TdY3ewtL1oKhBeiIW+QjN9EexrmkosFJznjLPb/SzS9i3hkd24ae1lVPEg=="
+  "resolved" "https://registry.npmjs.org/@netlify/framework-info/-/framework-info-8.0.1.tgz"
+  "version" "8.0.1"
   dependencies:
     "ajv" "^8.0.0"
     "filter-obj" "^2.0.1"
@@ -4184,11 +4184,6 @@
     "array-ify" "^1.0.0"
     "dot-prop" "^5.1.0"
 
-"compare-versions@^3.6.0":
-  "integrity" "sha512-W6Af2Iw1z4CB7q4uU4hv646dW9GQuBM+YpC0UvUCWSD8w90SJjp+ujJuXaEMtAXBtSqGfMPuFOVn4/+FlaqfBA=="
-  "resolved" "https://registry.npmjs.org/compare-versions/-/compare-versions-3.6.0.tgz"
-  "version" "3.6.0"
-
 "component-emitter@^1.2.1", "component-emitter@^1.3.0":
   "integrity" "sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg=="
   "resolved" "https://registry.npmjs.org/component-emitter/-/component-emitter-1.3.0.tgz"
@@ -6287,13 +6282,6 @@
     "locate-path" "^6.0.0"
     "path-exists" "^4.0.0"
 
-"find-versions@^4.0.0":
-  "integrity" "sha512-wgpWy002tA+wgmO27buH/9KzyEOQnKsG/R0yrcjPT9BOFm0zRBVQbZ95nRGXWMywS8YR5knRbpohio0bcJABxQ=="
-  "resolved" "https://registry.npmjs.org/find-versions/-/find-versions-4.0.0.tgz"
-  "version" "4.0.0"
-  dependencies:
-    "semver-regex" "^3.1.2"
-
 "flat-cache@^3.0.4":
   "integrity" "sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg=="
   "resolved" "https://registry.npmjs.org/flat-cache/-/flat-cache-3.0.4.tgz"
@@ -7160,21 +7148,10 @@
   "resolved" "https://registry.npmjs.org/human-signals/-/human-signals-2.1.0.tgz"
   "version" "2.1.0"
 
-"husky@^4.3.0":
-  "integrity" "sha512-LCqqsB0PzJQ/AlCgfrfzRe3e3+NvmefAdKQhRYpxS4u6clblBoDdzzvHi8fmxKRzvMxPY/1WZWzomPZww0Anow=="
-  "resolved" "https://registry.npmjs.org/husky/-/husky-4.3.8.tgz"
-  "version" "4.3.8"
-  dependencies:
-    "chalk" "^4.0.0"
-    "ci-info" "^2.0.0"
-    "compare-versions" "^3.6.0"
-    "cosmiconfig" "^7.0.0"
-    "find-versions" "^4.0.0"
-    "opencollective-postinstall" "^2.0.2"
-    "pkg-dir" "^5.0.0"
-    "please-upgrade-node" "^3.2.0"
-    "slash" "^3.0.0"
-    "which-pm-runs" "^1.0.0"
+"husky@^7.0.4":
+  "integrity" "sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ=="
+  "resolved" "https://registry.npmjs.org/husky/-/husky-7.0.4.tgz"
+  "version" "7.0.4"
 
 "hyphenate-style-name@^1.0.3":
   "integrity" "sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ=="
@@ -9155,14 +9132,14 @@
   "resolved" "https://registry.npmjs.org/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz"
   "version" "2.1.0"
 
-"netlify-cli@^8.6.23":
-  "integrity" "sha512-xiYpatBU2UKwITk7hv8ifZXvF4pi1u2urkWX+6Bl08kYuvvoM0CqkzIKbA0XYdE7L2ES+d0a45KX0pajRq1myA=="
-  "resolved" "https://registry.npmjs.org/netlify-cli/-/netlify-cli-8.6.23.tgz"
-  "version" "8.6.23"
+"netlify-cli@^8.8.0":
+  "integrity" "sha512-HdIadLjfvsLLtv26QDSz6Jn4XwLciHuaW91xd4KHCdLafpDqvRTOBAPiOBkXTLPX0iZshDwWeiuiBhjIsQVEvQ=="
+  "resolved" "https://registry.npmjs.org/netlify-cli/-/netlify-cli-8.8.0.tgz"
+  "version" "8.8.0"
   dependencies:
     "@netlify/build" "^26.1.1"
     "@netlify/config" "^17.0.3"
-    "@netlify/framework-info" "^8.0.0"
+    "@netlify/framework-info" "^8.0.1"
     "@netlify/local-functions-proxy" "^1.1.1"
     "@netlify/plugin-edge-handlers" "^3.0.2"
     "@netlify/plugins-list" "^6.2.1"
@@ -9769,11 +9746,6 @@
     "is-docker" "^2.1.1"
     "is-wsl" "^2.2.0"
 
-"opencollective-postinstall@^2.0.2":
-  "integrity" "sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q=="
-  "resolved" "https://registry.npmjs.org/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz"
-  "version" "2.0.3"
-
 "opn@^5.2.0":
   "integrity" "sha512-PqHpggC9bLV0VeWcdKhkpxY+3JTzetLSqTCWL/z/tFIbI6G8JCjondXklT1JinczLz2Xib62sSp0T/gKT4KksA=="
   "resolved" "https://registry.npmjs.org/opn/-/opn-5.5.0.tgz"
@@ -10305,13 +10277,6 @@
   "integrity" "sha512-fnWVljUchTro6RiCFvCXBbNhJc2NijN7oIQxbwsyL0buWJPG85v81ehlHI9fXrJsMNgTofEoWIQeClKpgxFLrg=="
   "resolved" "https://registry.npmjs.org/platform/-/platform-1.3.6.tgz"
   "version" "1.3.6"
-
-"please-upgrade-node@^3.2.0":
-  "integrity" "sha512-gQR3WpIgNIKwBMVLkpMUeR3e1/E1y42bqDQZfql+kDeXd8COYfM8PQA4X6y7a8u9Ua9FHmsrrmirW2vHs45hWg=="
-  "resolved" "https://registry.npmjs.org/please-upgrade-node/-/please-upgrade-node-3.2.0.tgz"
-  "version" "3.2.0"
-  dependencies:
-    "semver-compare" "^1.0.0"
 
 "plur@^4.0.0":
   "integrity" "sha512-4UGewrYgqDFw9vV6zNV+ADmPAUAfJPKtGvb/VdpQAx25X5f3xXdGdyOEVFwkl8Hl/tl7+xbeHqSEM+D5/TirUg=="
@@ -11326,22 +11291,12 @@
   dependencies:
     "commander" "^2.8.1"
 
-"semver-compare@^1.0.0":
-  "integrity" "sha1-De4hahyUGrN+nvsXiPavxf9VN/w="
-  "resolved" "https://registry.npmjs.org/semver-compare/-/semver-compare-1.0.0.tgz"
-  "version" "1.0.0"
-
 "semver-diff@^3.1.1":
   "integrity" "sha512-GX0Ix/CJcHyB8c4ykpHGIAvLyOwOobtM/8d+TQkAd81/bEjgPHrfba41Vpesr7jX/t8Uh+R3EX9eAS5be+jQYg=="
   "resolved" "https://registry.npmjs.org/semver-diff/-/semver-diff-3.1.1.tgz"
   "version" "3.1.1"
   dependencies:
     "semver" "^6.3.0"
-
-"semver-regex@^3.1.2":
-  "integrity" "sha512-Aqi54Mk9uYTjVexLnR67rTyBusmwd04cLkHy9hNvk3+G3nT2Oyg7E0l4XVbOaNwIvQ3hHeYxGcyEy+mKreyBFQ=="
-  "resolved" "https://registry.npmjs.org/semver-regex/-/semver-regex-3.1.3.tgz"
-  "version" "3.1.3"
 
 "semver@^5.3.0":
   "integrity" "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ=="
@@ -12974,11 +12929,6 @@
   "integrity" "sha1-2e8H3Od7mQK4o6j6SzHD4/fm6Ho="
   "resolved" "https://registry.npmjs.org/which-module/-/which-module-2.0.0.tgz"
   "version" "2.0.0"
-
-"which-pm-runs@^1.0.0":
-  "integrity" "sha1-Zws6+8VS4LVd9rd4DKdGFfI60cs="
-  "resolved" "https://registry.npmjs.org/which-pm-runs/-/which-pm-runs-1.0.0.tgz"
-  "version" "1.0.0"
 
 "which-typed-array@^1.1.2":
   "integrity" "sha512-vjxaB4nfDqwKI0ws7wZpxIlde1XrLX5uB0ZjpfshgmapJMD7jJWhZI+yToJTqaFByF0eNBcYxbjmCzoRP7CfEw=="
