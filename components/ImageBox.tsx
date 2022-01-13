@@ -26,7 +26,7 @@ const ImageBox: React.FC<Props> = ({
     setliked(localstoragedata.has(ndata.id));
   }, [ndata.id]);
   return (
-    <div key={num} id={ndata.id.toString()} className="flex content-center">
+    <div key={num} className="flex content-center">
       <Box
         m={3}
         p={2}

@@ -52,7 +52,7 @@ function Nasapage() {
       <h1>Mars Rover Images</h1>
       <div className="flex flex-row">
         <div className="flex w-1/12">
-          <Link href={`/nasapage/${curr_page - 1}`}>
+          <Link href={`/nasapage/${curr_page - 1}`} passHref>
             <Box
               sx={{
                 width: 80,
@@ -81,7 +81,7 @@ function Nasapage() {
           ))}
         </div>
         <div className="flex w-1/12 text-red-900">
-          <Link href={`/nasapage/${curr_page + 1}`}>
+          <Link href={`/nasapage/${curr_page + 1}`} passHref>
             <Box
               sx={{
                 width: 80,
