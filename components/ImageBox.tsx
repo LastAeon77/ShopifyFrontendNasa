@@ -5,7 +5,6 @@ import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Props } from "./types";
-import { useRouter } from "next/router";
 
 const ImageBox: React.FC<Props> = ({
   ndata,
@@ -27,7 +26,7 @@ const ImageBox: React.FC<Props> = ({
     setliked(localstoragedata.has(ndata.id));
   }, [ndata.id]);
   return (
-    <div id={ndata.id.toString()} className="flex content-center">
+    <div key={num} id={ndata.id.toString()} className="flex content-center">
       <Box
         m={3}
         p={2}

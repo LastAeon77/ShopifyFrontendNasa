@@ -16,7 +16,6 @@ function Nasapage() {
   const [data, setdata] = useState<Array<nasa_photo>>();
   const [likedset, setlikedset] = useState<Set<number>>(new Set<number>());
   const [curr_page, setcurr_page] = useState<number>(1);
-  const router = useRouter();
   const onclicklike = (id: number) => {
     likedset.add(id);
     setlikedset(likedset);
@@ -27,7 +26,7 @@ function Nasapage() {
     setlikedset(likedset);
     localStorage.setItem("data_set", JSON.stringify(Array.from(likedset)));
   };
-
+  const router = useRouter();
   useEffect(() => {
     if (router.query.page_num) {
       const num = router.query.page_num;
@@ -46,7 +45,7 @@ function Nasapage() {
     if (new_set !== null) {
       setlikedset(new Set(JSON.parse(new_set)));
     }
-  }, [router.isReady, router.asPath]);
+  }, [router.isReady]);
 
   return (
     <div className="flex flex-col items-center">
