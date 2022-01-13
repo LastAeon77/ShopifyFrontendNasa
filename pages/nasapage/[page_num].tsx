@@ -72,6 +72,7 @@ function Nasapage() {
         <div className="flex flex-wrap content-center justify-center items-center">
           {data?.map((object, i) => (
             <ImageBox
+              key={i}
               ndata={object}
               num={i}
               localstoragedata={likedset}
