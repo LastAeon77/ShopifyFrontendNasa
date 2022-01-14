@@ -40,16 +40,22 @@ function Nasapage() {
         `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=${router.query.page_num}&api_key=M3rkT4gOMlZc2KUz1Vyu2yRcjdFvZYcsF4aSj1dp`
       )
       .then((res) => setdata(res.data.photos as Array<nasa_photo>))
-      .catch((errors) => console.log(errors));
+      .catch((errors) => router.push("/nasapage/1"));
     const new_set = localStorage.getItem("data_set");
     if (new_set !== null) {
       setlikedset(new Set(JSON.parse(new_set)));
     }
   }, [router.isReady, router.asPath]);
+  let loading = [];
 
+  for (let i = 0; i < 1000; i++) {
+    loading.push(
+      <div className="flex flex-none w-10/12">Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading</div>
+    );
+  }
   return (
     <div className="flex flex-col items-center">
-        <h1>Mars Rover Images</h1>
+      <h1>Mars Rover Images</h1>
       <div className="flex flex-row">
         <div className="flex w-1/12">
           <Link href={`/nasapage/${curr_page - 1}`} passHref>
@@ -70,16 +76,20 @@ function Nasapage() {
           </Link>
         </div>
         <div className="flex flex-wrap content-center justify-center items-center">
-          {data?.map((object, i) => (
-            <ImageBox
-              key={i}
-              ndata={object}
-              num={i}
-              localstoragedata={likedset}
-              likefunction={onclicklike}
-              dislikefunction={onclickdislike}
-            />
-          ))}
+          {data ? (
+            data.map((object, i) => (
+              <ImageBox
+                key={i}
+                ndata={object}
+                num={i}
+                localstoragedata={likedset}
+                likefunction={onclicklike}
+                dislikefunction={onclickdislike}
+              />
+            ))
+          ) : (
+            <span style={{ width: 1000 }}>{loading}</span>
+          )}
         </div>
         <div className="flex w-1/12 text-red-900">
           <Link href={`/nasapage/${curr_page + 1}`} passHref>
