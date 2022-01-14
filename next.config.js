@@ -14,6 +14,7 @@ module.exports = {
         destination: "/nasapage/1",
         permanent: true,
       },
+
     ];
   },
 };

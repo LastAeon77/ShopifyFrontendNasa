@@ -3,6 +3,18 @@
   command = "next build"
   publish = ".next"
 
+[[redirects]]
+  from = "/"
+  to = "/nasapage/1"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/nasapage"
+  to = "/nasapage/1"
+  status = 302
+  force = true
+
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
   #[[redirects]]
