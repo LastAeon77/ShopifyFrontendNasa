@@ -50,12 +50,15 @@ function Nasapage() {
 
   for (let i = 0; i < 1000; i++) {
     loading.push(
-      <div className="flex flex-none w-10/12">Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading Loading</div>
+      <div className="flex flex-none w-10/12">
+        Loading Loading Loading Loading Loading Loading Loading Loading Loading
+        Loading Loading Loading Loading
+      </div>
     );
   }
   return (
     <div className="flex flex-col items-center">
-      <h1>Mars Rover Images</h1>
+      <h1>Mars Rover Images (Your likes are saved in browser!)</h1>
       <div className="flex flex-row">
         <div className="flex w-1/12">
           <Link href={`/nasapage/${curr_page - 1}`} passHref>
